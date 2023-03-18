@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>@ViewData["Title"] - Iteration2</title>
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="~/css/site.css" />
+    </head>
+    <body>
+        <header>
+            <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+                <div class="container">
+                    <img src="~/images/biryani.png" style="width:7%; height:7%;"/>
+                    
+                    <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between" style=" width:100%; color: #CE703A; font-size: 1em;">
+                        <ul class="navbar-nav flex-grow-1">
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="FoodItems">Food List</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="FoodDetails">Food Item Details</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Payment">Payment</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Reservation">Reserve Table</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="navBtn">
+                        <button type="button" class="btnLogIn">Log In</button>
+                        <button type="button" class="btnRegister">Register</button>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <div class="container">
+            <main role="main" class="pb-3">
+                @RenderBody()
+            </main>
+        </div>
+
+        <footer>
+                <div id="footerInfo">
+                    <div id="quickLinks">
+                        <div class="listLinks">
+                            <h4>Deals</h4>
+                            <a href="#">Daily specials</a><br />
+                            <a href="#">Happy Hour</a><br />
+                            <a href="#">Seasonal specials</a>
+                        </div>
+                        <div class="listLinks">
+                            <h4>House of cities</h4>
+                            <a href="#">Legal</a><br />
+                            <a href="#">Privacy</a><br />
+                            <a href="#">Terms</a>
+                        </div>
+                        <div class="listLinks">
+                            <h4>Locations</h4>
+                            <a href="#">Kitchener</a><br />
+                            <a href="#">Mississauga</a><br />
+                            <a href="#">Toronto</a>
+                        </div>
+                    </div><br />
+
+                    <hr />
+
+                    <div id="contactInfo">
+                        <h5>Contact Us</h5>
+                        <br />
+                        <div class="socialLinks">
+                            <img src="~/images/facebook (1).png" />
+                            <img src="~/images/email.png" />
+                            <img src="~/images/telephone.png" />
+                            <img src="~/images/instagram.png" />
+                        </div>
+                        <br />
+                        <h6>Copyright@HouseOfCities 2023</h6>
+                    </div>
+                </div>
+        </footer>
+        <script src="~/lib/jquery/dist/jquery.min.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
+        @await RenderSectionAsync("Scripts", required: false)
+    </body>
+</html>
